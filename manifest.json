@@ -1,0 +1,12 @@
+{
+  "manifest_version": 2,
+  "name": "Highlighter Tool",
+  "version": "0.1",
+  "description": "Finds and highlights given words",
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": "./scripts/content.js"
+    }
+  ]
+}
