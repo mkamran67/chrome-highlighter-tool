@@ -3,39 +3,44 @@ document.addEventListener('DOMContentLoaded', onLoaded, false);
 function onLoaded() {
   // Check for previous list of items and load them
 
+  // Save by "Enter key"
   document.getElementById('addWord').addEventListener('keypress', (e) => {
+    // Save Word
     if (e.key === 'Enter') {
       // Save to storage and reload list.
+      // Get ID -> Value from last input ID
+      // Get Key -> Word from input
+      document.getElementById('submitBTN');
     }
+  });
+
+  // Delete List item || Delete via clicks
+  document.getElementById('container').addEventListener('click', (e) => {
+    // Get ID -> Value
+    // Get Key -> Word
+    console.log(e.path);
   });
 }
 
-function setKeyCounter(counter) {
-  chrome.storage.local.set({ counter: counter });
+function saveToLocal(item) {
+  let previousList = getFromLocal(); // Get previous list
+
+  previousList.push(item);
+
+  chrome.storage.local.set({ wordList: value }, function () {
+    // On save reload list.
+    console.log('Value is set to ' + value);
+  });
 }
-
-function getCounter() {
-  let counter = 0;
-
-  chrome.storage.local.get(['counter'], (res) => (counter = res));
-
-  return counter;
-}
-
-function saveToLocal(item) {}
 
 function getFromLocal() {
-  chrome.storage.local.set();
+  chrome.storage.local.get(['wordList'], function (result) {
+    console.log('Value currently is ' + result.key);
+  });
 }
 
-function deleteItem(key) {}
+function deleteItem(id) {}
 
-function loadList() {}
-
-chrome.storage.local.set({ key: value }, function () {
-  console.log('Value is set to ' + value);
-});
-
-chrome.storage.local.get(['key'], function (result) {
-  console.log('Value currently is ' + result.key);
-});
+function loadList() {
+  const listId = document.getElementById('list');
+}
