@@ -1,1 +1,1 @@
-console.log(`Chrome extension test`);
+console.log(`Chrome extension test - content script`);

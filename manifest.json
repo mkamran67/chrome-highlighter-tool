@@ -3,10 +3,23 @@
   "name": "Highlighter Tool",
   "version": "0.1",
   "description": "Finds and highlights given words",
+  "browser_action": {
+    "default_icon": {
+      "16": "icons/pen-16.png",
+      "30": "icons/pen-30.png",
+      "40": "icons/pen-40.png",
+      "80": "icons/pen-80.png"
+    },
+    "default_popup": "popup/index.html"
+  },
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": "./scripts/content.js"
+      "js": ["scripts/content.js"]
     }
-  ]
+  ],
+  "background": {
+    "scripts": ["scripts/background.js"],
+    "persistent": false
+  }
 }

@@ -1,0 +1,106 @@
+* {
+  font-size: 16px;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Extension sizing */
+body {
+  min-width: 150px;
+  max-width: 400px;
+  max-height: 400px;
+}
+
+/* Submit button & input */
+.submit {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+}
+
+.submit input {
+  max-width: 85%;
+  padding: 5px;
+  margin-right: 5px;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.submit input:focus {
+  outline: none;
+  box-shadow: 0 0 1px 1px rgba(140, 148, 248, 1);
+}
+
+.error input {
+  box-shadow: 0 0 1px 1px rgba(140, 148, 248, 1);
+}
+
+.submit button {
+  width: 30px;
+  height: 30px;
+  border: none;
+}
+
+.submit button img {
+  width: 100%;
+  height: 100%;
+  transition: all 200ms ease;
+}
+.submit button img:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+/* List of highlist words. */
+ul {
+  list-style: none;
+  margin: 0 5px;
+}
+
+/* List Item */
+ul li {
+  margin: 5px 0;
+  padding: 3px 5px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  display: flex;
+  justify-content: space-between;
+}
+
+/* List P -> Paragraph */
+ul li p {
+  display: inline;
+  margin-left: 10px;
+}
+
+/* List X -> Button */
+ul li button {
+  height: 30px;
+  width: 30px;
+  border: none;
+}
+
+ul li img {
+  width: 100%;
+  height: 100%;
+  transition: all 200ms ease;
+}
+
+ul li img:hover {
+  cursor: pointer;
+  transform: scale(1.5);
+}
+
+button:focus {
+  outline: none;
+}
+
+/* Margins for First and Last child */
+ul li:first-child {
+  margin-top: 5px;
+}
+
+ul li:last-child {
+  margin-bottom: 10px;
+}
