@@ -1,0 +1,82 @@
+/**
+ *  Colors
+ *1  RGB(255,195,0);
+ *2  RGB(237,221,83);
+ *3  RGB(173,212,92);
+ *4  RGB(87,199,133);
+ *5  RGB(0,186,173);
+ *6  RGB(42,123,155);
+ *7  RGB(61,61,107);
+ *8  RGB(81,24,73);
+ *9  RGB(144,12,63);
+ *10  RGB(199,0,57);
+ *11  RGB(255,87,51);
+ *12  RGB(255,141,26);
+ */
+
+.highlight-color-0 {
+  background-color: RGB(200, 255, 40) !important;
+  font-size: 1.1rem;
+  color: black !important;
+}
+
+.highlight-color-1 {
+  background-color: RGB(255, 195, 0) !important;
+  font-size: 1.1rem;
+  color: black !important;
+}
+.highlight-color-2 {
+  background-color: RGB(237, 221, 83) !important;
+  font-size: 1.1rem;
+  color: black !important;
+}
+.highlight-color-3 {
+  background-color: RGB(173, 212, 92) !important;
+  font-size: 1.1rem;
+  color: black !important;
+}
+.highlight-color-4 {
+  background-color: RGB(87, 199, 133) !important;
+  font-size: 1.1rem;
+  color: black !important;
+}
+.highlight-color-5 {
+  background-color: RGB(0, 186, 173) !important;
+  font-size: 1.1rem;
+  color: black !important;
+}
+.highlight-color-6 {
+  background-color: RGB(42, 123, 155) !important;
+  font-size: 1.1rem;
+  color: white !important;
+}
+.highlight-color-7 {
+  background-color: RGB(61, 61, 107) !important;
+  font-size: 1.1rem;
+  color: white !important;
+}
+.highlight-color-8 {
+  background-color: RGB(81, 24, 73) !important;
+  font-size: 1.1rem;
+  color: white !important;
+}
+.highlight-color-9 {
+  background-color: RGB(144, 12, 63) !important;
+  font-size: 1.1rem;
+  color: white !important;
+}
+.highlight-color-10 {
+  background-color: RGB(199, 0, 57) !important;
+  font-size: 1.1rem;
+  color: white !important;
+}
+.highlight-color-11 {
+  background-color: RGB(255, 87, 51) !important;
+  font-size: 1.1rem;
+  color: black !important;
+}
+.highlight-color-12 {
+  background-color: RGB(255, 141, 26) !important;
+  font-size: 1.1rem;
+  color: black !important;
+}
