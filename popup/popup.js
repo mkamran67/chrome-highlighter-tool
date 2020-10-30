@@ -1,3 +1,11 @@
+/**
+ * This script will only run on popup launch.
+ * List of things this script will do(es)
+ * 1. Load list of current words from local storage
+ * 2. Add words to local storage
+ * 3. Remove words from local storage
+ *
+ */
 document.addEventListener('DOMContentLoaded', onLoaded, false);
 
 function onLoaded() {
