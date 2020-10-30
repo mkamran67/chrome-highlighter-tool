@@ -14,6 +14,7 @@
   },
   "content_scripts": [
     {
+      "run_at": "document_end",
       "matches": ["<all_urls>"],
       "js": ["scripts/content.js"]
     }
@@ -22,5 +23,5 @@
     "scripts": ["scripts/background.js"],
     "persistent": false
   },
-  "permissions": ["storage", "activeTab"]
+  "permissions": ["storage", "activeTab", "tabs"]
 }

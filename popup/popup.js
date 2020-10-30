@@ -32,8 +32,7 @@ function onLoaded() {
       // Add Word to list
       saveToLocal(incomingWord);
     } else if (parentEl.tagName === 'LI') {
-      console.log(`Close LI Button pressed`);
-      //
+      // Delete word
       deleteWord(parentEl.firstElementChild.innerText);
     }
   });
@@ -57,10 +56,8 @@ function saveToLocal(word) {
 
       // Check if wordList exists
       if (typeof wordList !== 'undefined' && wordList.length > 0) {
-        console.log(`WordList is defined`);
         // Check if word exists in wordList, if doesn't exist ->
         if (wordList.indexOf(word) === -1) {
-          console.log(`Word was not found in the list. ${word}`);
           wordArray = [...wordList, word];
         } // if
         else {
@@ -69,7 +66,6 @@ function saveToLocal(word) {
         }
       } // if
       else {
-        console.log(`List DNE & ${word} was entered`);
         // This runs when the wordList is DNE
         wordArray.push(word);
       }
@@ -136,7 +132,6 @@ function deleteWord(word) {
     if (wordList.length > 1) {
       // Loop through and remove
       let newWordList = wordList.filter((el) => el !== word);
-      console.log(newWordList);
 
       chrome.storage.local.set({ wordList: newWordList }, () => {
         reloadList();
