@@ -1,0 +1,26 @@
+{
+  "name": "chrome-highlighter-tool",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "webpack": "^5.4.0"
+  },
+  "devDependencies": {
+    "mark.js": "^8.11.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mkamran67/chrome-highlighter-tool.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mkamran67/chrome-highlighter-tool/issues"
+  },
+  "homepage": "https://github.com/mkamran67/chrome-highlighter-tool#readme"
+}

@@ -18,7 +18,7 @@
       "run_at": "document_end",
       "matches": ["<all_urls>"],
       "css": ["css/highlight.css"],
-      "js": ["scripts/content.js"]
+      "js": ["scripts/bundle.js"]
     }
   ],
   "background": {
