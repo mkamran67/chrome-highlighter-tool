@@ -4,19 +4,15 @@
 
 const Mark = require('mark.js');
 
-const onLoad = () => {
-  console.log(`Content Script`);
-  let instance = new Mark(document.querySelector('body'));
+const addChangesListener = () => {
+  document.addEventListener('DOMNodeInserted', onDomChanges);
+};
 
-  // Marks words on page load
-  reloadList(instance);
-
-  // Listens to storage changes
-  chrome.storage.local.onChanged.addListener(() => {
-    wordChange(instance);
+const removeChangesListener = () => {
+  console.log(`test`);
+  document.removeEventListener('DOMNodeInserted', (e) => {
+    console.log(e);
   });
-
-  // TODO: -> React DOM changes
 };
 
 const reloadList = (instance) => {
@@ -62,9 +58,11 @@ const wordChange = (instance) => {
   }
 };
 
-const onDomChanges = () => {
+const onDomChanges = (e) => {
+  document.removeEventListener('DOMNodeInserted', onDomChanges, false);
+
   let instance = new Mark(document.querySelector('body'));
-  console.log(`Dom changed`);
+
   // Unmark then re-mark
   instance.unmark({
     done: function () {
@@ -81,9 +79,31 @@ const onDomChanges = () => {
             });
           });
         }
+
+        // Add event Listener
+        document.addEventListener('DOMNodeInserted', onDomChanges, false);
       });
     },
   });
+};
+
+const onLoad = () => {
+  console.log(`Content Script`);
+  let instance = new Mark(document.querySelector('body'));
+
+  // Marks words on page load
+  reloadList(instance);
+
+  // Listens to storage changes
+  chrome.storage.local.onChanged.addListener(() => {
+    wordChange(instance);
+  });
+
+  // TODO: -> React DOM changes
+  setTimeout(() => {
+    // document.addEventListener('DOMNodeInserted', onDomChanges);
+    document.addEventListener('DOMNodeInserted', onDomChanges, false);
+  }, 1500);
 };
 
 onLoad();
