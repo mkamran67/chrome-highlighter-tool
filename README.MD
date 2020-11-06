@@ -2,6 +2,11 @@
 
 This Extension allows the user to add words to highlight on the current page.
 
-#### TODO
+###Extension Demo
+![Demo of Extension](./assets/chrome_highlighter.gif)
 
-    1. Handle 1 Page App DOM changes.
+Built with
+
+```
+Webpack, Mark.js, Vanilla JS and CSS.
+```
