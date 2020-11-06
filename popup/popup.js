@@ -18,6 +18,7 @@ function onLoaded() {
     if (e.key === 'Enter') {
       // Save word
       saveToLocal(document.getElementById('addWord').value);
+      document.getElementById('addWord').value = '';
     }
   });
 
@@ -31,6 +32,7 @@ function onLoaded() {
       const incomingWord = document.getElementById('addWord').value;
       // Add Word to list
       saveToLocal(incomingWord);
+      document.getElementById('addWord').value = '';
     } else if (parentEl.tagName === 'LI') {
       // Delete word
       deleteWord(parentEl.firstElementChild.innerText);

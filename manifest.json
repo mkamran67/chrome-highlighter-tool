@@ -15,15 +15,11 @@
   },
   "content_scripts": [
     {
-      "run_at": "document_end",
       "matches": ["<all_urls>"],
+      "run_at": "document_end",
       "css": ["css/highlight.css"],
-      "js": ["scripts/bundle.js"]
+      "js": ["scripts/content.js"]
     }
   ],
-  "background": {
-    "scripts": ["scripts/background.js"],
-    "persistent": false
-  },
   "permissions": ["storage", "activeTab", "tabs"]
 }
