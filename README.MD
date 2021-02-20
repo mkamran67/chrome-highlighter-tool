@@ -2,7 +2,7 @@
 
 This Extension allows the user to add words to highlight on the current page.
 
-###Extension Demo
+#### Extension Demo
 ![Demo of Extension](./assets/chrome_highlighter.gif)
 ![Second Demo of Extension](./assets/wiki_demo.gif)
 
